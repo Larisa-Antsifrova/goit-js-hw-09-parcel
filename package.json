@@ -4,6 +4,7 @@
   "description": "NPM Basics. Parcel.",
   "main": "index.js",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html --public-url /goit-js-hw-09-parcel/",
     "deploy": "gh-pages -d dist",
@@ -25,5 +26,8 @@
   "dependencies": {
     "gh-pages": "^3.1.0",
     "parcel-plugin-nuke-dist": "^1.0.1"
+  },
+  "resolutions": {
+    "node-forge": "0.10.0"
   }
 }
